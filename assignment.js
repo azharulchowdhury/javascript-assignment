@@ -9,16 +9,21 @@ function kilometerToMeter(kilometer){
         return "please enter positive numeric value";
     }
 }
+var result=kilometerToMeter(14);
+console.log(result);
 
-
-// budgetCalculator
+// twst
 function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
-    totalCost=0;
-    watchCost = watchQuantity * 50;
-    phoneCost =phoneQuantity * 100;
-    laptopCost = laptopQuantity * 500;
-    totalCost = watchCost + phoneCost + laptopCost;
-    return totalCost;
+    if(watchQuantity>0 && phoneQuantity>0 && laptopQuantity>0){
+        var watchQuantity=parseInt(watchQuantity);
+        var phoneQuantity=parseInt(phoneQuantity);
+        var laptopQuantity=parseInt(laptopQuantity);
+        total=watchQuantity*50 +phoneQuantity*100 + laptopQuantity*500;
+        return total;
+    }
+    else{
+        return "Please enter positive integer value";
+    }
 }
-var result1= budgetCalculator(2.5,3.5,5);
-console.log(result1);
+var totalPrice=budgetCalculator(2.5,3.5,-5);
+console.log(totalPrice);
