@@ -12,7 +12,8 @@ function kilometerToMeter(kilometer){
 var result=kilometerToMeter(14);
 console.log(result);
 
-// twst
+// budgetCalculator
+
 function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
     if(watchQuantity>0 && phoneQuantity>0 && laptopQuantity>0){
         var watchQuantity=parseInt(watchQuantity);
@@ -27,3 +28,25 @@ function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
 }
 var totalPrice=budgetCalculator(2.5,3.5,-5);
 console.log(totalPrice);
+
+// hotelCost
+function hotelCost(bookingDays){
+    var bookingDays= Math.ceil(bookingDays);
+if (bookingDays>0 && bookingDays<=10){
+    totalBill= bookingDays*100;
+    return totalBill;
+}
+else if (bookingDays>0 && bookingDays<=20){
+    totalBill= 10*100 + (bookingDays-10)*80;
+    return totalBill;
+}
+else if (bookingDays>=21){
+    totalBill=10*100+10*80+(bookingDays-20)*50;
+    return totalBill;
+}
+else if(bookingDays<=0){
+    return "incorrect input";
+}
+}
+var bill=hotelCost(8.5);
+console.log(bill);
