@@ -9,7 +9,7 @@ function kilometerToMeter(kilometer){
         return "please enter positive numeric value";
     }
 }
-var result=kilometerToMeter(14);
+var result=kilometerToMeter(-10);
 console.log(result);
 
 // budgetCalculator
@@ -26,7 +26,7 @@ function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
         return "Please enter positive integer value";
     }
 }
-var totalPrice=budgetCalculator(2.5,3.5,-5);
+var totalPrice=budgetCalculator(2.5,3.5,5);
 console.log(totalPrice);
 
 // hotelCost
@@ -50,3 +50,22 @@ else if(bookingDays<=0){
 }
 var bill=hotelCost(8.5);
 console.log(bill);
+
+// megaFriend
+var friends=["usa","canada","england","india","bangladesh"];
+function megaFriend(){
+    country=0;largest=0;
+    for(var i=0; i<friends.length; i++)
+    {
+      element=friends[i].length;{
+          if(element>largest){
+              largest=element;
+              country=friends[i];
+          }
+      }
+
+    }
+    return country;
+}
+var maximum =megaFriend();
+console.log(maximum);
