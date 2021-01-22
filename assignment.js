@@ -9,5 +9,16 @@ function kilometerToMeter(kilometer){
         return "please enter positive numeric value";
     }
 }
-var result = kilometerToMeter(1000);
-console.log(result);
+
+
+// budgetCalculator
+function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
+    totalCost=0;
+    watchCost = watchQuantity * 50;
+    phoneCost =phoneQuantity * 100;
+    laptopCost = laptopQuantity * 500;
+    totalCost = watchCost + phoneCost + laptopCost;
+    return totalCost;
+}
+var result1= budgetCalculator(2.5,3.5,5);
+console.log(result1);
